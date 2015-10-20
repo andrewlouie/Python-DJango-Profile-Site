@@ -1,7 +1,0 @@
-Dark Green: #20501a
-Light Green: #3dc21b
-Orange: #fc7b0a
-Grey: #555555
-White: #ffffff
-Yellowy: #d8ec83
-light grey background: #ecece4
