@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-1);
+      }
+    </style>
+
+    <linearGradient id="linear-gradient-1" gradientUnits="userSpaceOnUse" y1="13.757" x2="171" y2="157.243">
+      <stop offset="0" stop-color="#b885ff"/>
+      <stop offset="1" stop-color="#b885ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <polygon points="0,0 0,250 250,0" class="cls-1"/>
+</svg>

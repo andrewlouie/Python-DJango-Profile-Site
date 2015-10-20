@@ -1,0 +1,47 @@
+﻿{% extends "template.html" %}
+{% block styles %}
+    .tree {
+    max-width: 600px;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    }
+    h1 {
+    color: #333 !important;
+    }
+    .tree>li>a {
+    border: 1px rgba(193,32,35,0.55) solid !important;
+    font-weight: bold;
+    font-size: 15px;
+    }
+    p {font-size: 20px; }
+{% endblock %}
+{% block main %}
+<h1>Developer Resources</h1>
+    <link href="../static/css/tree.css" type="text/css" rel="stylesheet" />
+    <p>These are some links to online resources that I have found helpful while learning and working with different languages.  I thought I'd share them in the hopes that you might find them helpful as well.  I'm constantly updating so if you know of any interesting things I've missed,
+        <a href="{% url 'contact' %}" style="color:#B885FF">send me a message</a> or tweet it to
+        <a href="https://twitter.com/intent/tweet?screen_name=AndrewAaronDev" style="color:#B885FF" target="_blank" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">@AndrewAaronDev</a>, I'd be happy to hear it!</p>
+  <ul class='tree'>
+    {% for link in list %}
+
+        {% ifchanged link.cat %}
+            {% if forloop.counter > 1 %}
+            </li></ul>
+            {% endif %}
+        <li><a>{{ link.cat }}</a><ul>
+        {% endifchanged %}
+        <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+{% block afterfooter %}
+<script>
+        $(function() {
+            $('.tree>li>a').next().hide();
+        });
+        $('.tree>li>a').click(function () {
+            $(this).next().slideToggle();
+        })
+    </script>
+{% endblock %}

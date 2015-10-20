@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon" />
+    <title>Andrew Aaron - {{ title }}</title>
+    <meta name="title" content="Andrew Aaron  - {{ title }}">
+	<meta name="description" content="The portfolio, resume and infomration about Andrew Aaron, web and application developer in Waterloo Ontario">
+    <meta name="keywords" content="Java,HTML,CSS,C#,Android,IOS,Development,Developer,Kitchener,Waterloo,Cambridge,Python,JSP,ASP.NET,Visual Basic,VB.NET,SQL,JQuery,JavaScript,Linux,IIS,Apache,PHP,Windows Store,App,Adobe,Microsoft">
+    <meta name="author" content="Andrew Aaron">
+	<link href="../static/css/bootstrap.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css">
+
+<link href="../static/css/stylesheet.css" rel="stylesheet" type="text/css">
+<style>
+{% block styles %}{% endblock %}
+</style>
+
+  </head>
+  <body><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68695744-1', 'auto');
+  ga('send', 'pageview');
+
+</script><noscript><style type="text/css">body { display: block; }</style></noscript>
+  <header id="sticky_navigation" class="hidden-print">
+<nav class="aamainnav">
+<ul>	
+<a href="{% url 'home' %}" class="aatitle">Andrew Aaron</a>
+<div class="aamainlinks" id="mainlinks">
+<li><a class="a" href="{% url 'home' %}">Home</a></li>
+<li><a class="a" href="{% url 'about' %}">About Me</a>
+<li><a class="a" href="{% url 'resume' %}">Resume</a></li>
+<li><a class="a" href="{% url 'portfolio' %}">Portfolio</a></li>
+<li><a class="a" href="{% url 'developers' %}">Developer Resources</a></li>
+<li><a class="a" href="{% url 'contact' %}">Contact</a></li>
+</div></ul>
+</nav>
+
+<ul class="soc">
+    <li><a class="soc-linkedin" href="https://ca.linkedin.com/pub/andrew-aaron/101/169/762" target="_blank"></a></li>
+    <li><a class="soc-twitter" href="https://twitter.com/AndrewAaronDev" target="_blank"></a></li>
+    <li><a class="soc-github" href="https://github.com/andrewlouie" target="_blank"></a></li>
+    <li><a class="soc-facebook" href="https://www.facebook.com/andrewlouie2" target="_blank"></a></li>
+    <li><a class="soc-email2 soc-icon-last" href="mailto:andrew_louie@hotmail.com"></a></li>
+</ul>
+
+</header>
+<div id="placeholder"></div>
+<div class="main">
+{% block main %}{% endblock %}
+</div>
+
+<footer class="hidden-print">
+&copy; Copyright {{ year }} Andrew Aaron
+</footer>
+	<script src="../static/js/jquery-1.11.2.min.js"></script>
+	<script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/myscript.js"></script>
+  {% block afterfooter %}{% endblock %}
+  </body>
+</html>
