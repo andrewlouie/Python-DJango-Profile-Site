@@ -1,0 +1,120 @@
+﻿{% extends "template.html" %}
+{% block styles %}
+.downabit {
+margin-top: 20px;	
+}
+.spaceabit {
+margin-right: 10px;	
+}
+.rightside a {
+font-size: 11px;
+color: #428bca;
+  font-weight: 700;
+}
+.label {
+font-size: 13px;
+line-height: 30px;
+}
+.thumbnail img {
+max-width: 95%;
+height: 100px;
+width: auto;
+max-height: 100px;
+}
+.soc2 {
+	text-align:right;
+	width: auto;
+	padding-right: 100px;
+	z-index:0;
+}
+.soc2 li a {
+	overflow:inherit;
+	margin-right:5px;
+	margin-left:5px;
+	display:inline;
+}
+.soc2 li a:hover {
+	 z-index: 1000;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.aanewfont {
+font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif !important;
+font-size: 11px;
+display:inline-block;
+margin-left:4px;
+}
+@media screen and (max-width: 768px) {
+.soc2 { text-align: left; }
+}
+@media screen and (max-width: 520px) {
+.aaitemtitle { font-size: 24px; }	
+}
+{% endblock %}
+{% block main %}
+<h1>Portfolio</h1>
+<div class="container-fluid" style="width:90%">
+	<div class="row">
+		<div class="col-xs-3 list-group hidden-xs">
+    {% for item in list %}
+
+        {% ifchanged %}
+        <h3>{{  item.category.name }}
+            <img src='../static/include/{{ item.category.thumb }}' width='40' alt='{{ item.category.name }} Icon'/>
+        </h3>
+        {% endifchanged %}
+        <a href='#item{{ item.id }}' class='list-group-item'>{{ item.title }}</a>
+    {% endfor %}
+        </div><div class='col-sm-9 col-xs-12 rightside'>
+        {% for item in list %}
+        <div id='item{{ item.id }}'><div class='row'><div class='col-sm-6'><h2 class='aaitemtitle'>
+            {{ item.title }}
+        </h2></div><div class='col-sm-6 downabit'><ul class='soc soc2'>
+            {% if item.github %}
+            <li><a class='soc-github' href='{{ item.github }}' target='_blank'>
+                <span class='aanewfont'> GITHUB</span></a>
+            </li>
+            {%  endif %}
+            {% if item.download %}
+            <li><a href='{% if 'http' in item.download %}{{ item.download }}{% else %}../static/{{ item.download }}{% endif %}' target='_blank'>
+                <span class='glyphicon glyphicon-eye-open' style='color:#333333' aria-hidden='true'></span><span class='aanewfont'> VIEW</span></a>
+            </li>
+            {% endif %}
+		</ul></div></div><h5>{{ item.category.name }}
+            <img src='../static/include/{{ item.category.thumb }}' width='30' alt='{{ item.category.name }} Icon'/>
+        </h5>
+            {% for key in item.keyword %}
+            <span class='label label-primary'>{{ key }}</span>
+            {% endfor %}
+                <br><br><p>{{ item.description }}</p>
+            <div class='row'>
+
+            {%  for pic in item.pics %}
+            <div class='col-xs-6 col-md-3'><a rel='{{ item.title }}' href='../static/portfolio/{{ item.images }}/{{ pic }}' class='thumbnail fancybox'>
+                <img src='../static/portfolio/{{ item.images }}/{{ pic }}'/></a></div>
+            {% endfor %}
+
+            </div></div><hr>
+        {% endfor %}
+    </div></div></div>
+{% endblock %}
+{% block afterfooter %}
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="../static/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../static/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../static/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="../static/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../static/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../static/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="../static/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="../static/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>{% endblock %}

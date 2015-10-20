@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Lee's Landscapes || Customer Records</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="lee.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style2 {color: #004000}
+.style4 {font-size: 10}
+-->
+</style>
+<script>
+var custName = new Array("Smith, Al","Toms, Andy","Jones, Zack","Vargas, Eddie","Donner, Alice","McMullen, Jessie","Nevins, Carol","Stark, Howard","Neeland, Franny","Boxby, Amos");
+var mnthCharge = new Array(140.00, 42.00, 18.00, 18.00, 36.00, 140.00, 42.00, 24.00, 140.00, 24.00);
+var pastDueAmt = new Array(0, 0, 84.00, 36.00, 0, 18.00, 42.00, 42.00, 96.00, 0);
+var dayPastDue = new Array(0, 0, 60, 60, 0, 30, 90, 30, 120, 0);
+var asc = false
+var sortby = 1
+var td = document.getElementsByTagName('td');
+function load() {
+	for (i = 0;i<custName.length;i++) {
+		var row = customers.insertRow(-1);
+		row.insertCell(0);
+		row.insertCell(1);
+		row.insertCell(2);
+		row.insertCell(3);
+	}
+	sort(1);
+}
+function sort(aacol) {
+	if (sortby == aacol) { asc = !asc; }
+	else asc = true
+	sortby = aacol
+	sortarrays();
+	for (i= 0;i<custName.length;i++) {
+		td[i * 4].innerHTML = custName[i];
+		td[(i * 4) + 1].innerHTML = mnthCharge[i];
+		td[(i * 4) + 2].innerHTML = pastDueAmt[i];
+		td[(i * 4) + 3].innerHTML = dayPastDue[i];
+	}
+	event.preventDefault();
+}
+function sortarrays() {
+	zipped = []
+	for (var i=0; i<custName.length; i++) { zipped.push({custName: custName[i], mnthCharge: mnthCharge[i], pastDueAmt: pastDueAmt[i], dayPastDue: dayPastDue[i]});};
+	zipped.sort(function(x,y) {
+		if (sortby == 1) {
+		if (x.custName === y.custName) { return 0; }
+		else { return (x.custName < y.custName) ? -1 : 1; }
+		}
+		if (sortby == 2) {
+		if (x.mnthCharge === y.mnthCharge) { return 0; }
+		else { return (x.mnthCharge < y.mnthCharge) ? -1 : 1; }
+		}
+		if (sortby == 3) {
+		if (x.pastDueAmt === y.pastDueAmt) { return 0; }
+		else { return (x.pastDueAmt < y.pastDueAmt) ? -1 : 1; }
+	    }
+		if (sortby == 4) {
+		if (x.dayPastDue === y.dayPastDue) { return 0; }
+		else { return (x.dayPastDue < y.dayPastDue) ? -1 : 1; }
+		}
+	});
+	if (!asc) zipped.reverse()
+	var z;
+	for (i=0; i<zipped.length; i++) { 
+		z = zipped[i]; 
+		custName[i] = z.custName; 
+		mnthCharge[i] = z.mnthCharge; 
+		pastDueAmt[i] = z.pastDueAmt;
+		dayPastDue[i] = z.dayPastDue;
+	}
+}
+</script>
+</head>
+<body onload="load(1)">
+<div id="container">
+
+ <img src="images/lee_landscape.jpg" class="floatleft" />
+ <h1 id="logo"><em>Lee's Landscapes Customer Records</em></h1>
+  
+ <blockquote>
+       <h3 align="center"> Beautifying our world, one step at a time</h3>
+  </blockquote>
+ <p>&nbsp;</p>
+<div id="nav">
+  <a href="index.html">Home</a>
+  <a href="lee.html">About Lee</a>
+  <a href="lee_service.html">Lee's Services</a>
+  <a href="lee_order.html">Order Services</a>
+  <a href="tools.html">Gardening tools</a>
+   <a href="tips.html">Tips &amp; tricks</a>
+  <a href="contact.html">Contact us</a>
+  <a href="lee_signup.html">Sign Up</a>
+</div>
+<div id="content">
+<u>Click the headers to sort table</u>
+<table id="customers"><tr><th><a href="#" onclick="sort(1)">Customer Name</a></th><th><a href="#" onclick="sort(2)">Monthly charge</a></th><th><a href="#" onclick="sort(3)">Past Due Amount</a></th><th><a href="#" onclick="sort(4)">Days Past Due</a></th></tr>
+</table>
+
+</div>
+<div id="footer">Copyright &copy; 2013 Lee's Landscapes<br />
+<a href="mailto:yourfirstname@yourlastname.com" class="style2">yourfirstname@yourlastname.com</a></div>
+</div>
+</body>
+</html>

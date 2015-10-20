@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Greg's Gambits | Greg's Maze</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<script type = "text/javascript">
+var td = document.getElementsByTagName('td');
+var aarow = 0
+var aacolumn = 0
+var pitfall1 = 0
+var pitfall2 = 0
+var pitfall3 = 0
+function moveGuy(element) {
+var clickedcol = element.cellIndex;
+var clickedrow = element.parentElement.rowIndex;
+var clickedcell = (clickedrow * 4) + clickedcol
+if (((clickedrow == aarow + 1) || (clickedrow == aarow - 1)) && (clickedcol == aacolumn)) moveGuy2(clickedcell,clickedrow,clickedcol);
+else if (((clickedcol == aacolumn + 1) || (clickedcol == aacolumn - 1)) && (clickedrow == aarow)) moveGuy2(clickedcell,clickedrow,clickedcol);
+else { alert("Illegal move") }
+}
+function moveGuy2(aato,newrow,newcol) {
+var aafrom = (aarow * 4) + aacolumn
+pitfalls = new Array(pitfall1,pitfall2,pitfall3)
+if (pitfalls.indexOf(aato) >= 0) { alert("You fell in a pit! Be careful!"); return; }	
+if (aato == 19) { 
+if (confirm("You Win! Play Again?") == true) {
+td[0].style.backgroundImage = "url(images/superhero.jpg)";
+td[aafrom].style.backgroundImage = "";
+aarow = 0
+aacolumn = 0
+setPitfalls();
+return;
+}
+else return; 
+}
+aacolumn = newcol;
+aarow = newrow;
+td[aafrom].style.backgroundImage = "";
+td[aato].style.backgroundImage = "url(images/superhero.jpg)";
+}
+
+function getReady() {
+for (var i = 0, length = td.length; i < length; i++) { 
+	td[i].addEventListener("click", function() { moveGuy(this); });
+    }
+td[19].style.backgroundImage = "url(images/castle.png)";
+td[19].style.backgroundSize = "cover";
+td[0].style.backgroundImage = "url(images/superhero.jpg)";
+}
+setPitfalls();
+function setPitfalls() {
+pitfall1 = (Math.floor(Math.random() * (19 - 1)) + 1);
+pitfall2 = (Math.floor(Math.random() * (19 - 1)) + 1);
+while (pitfall2 == pitfall1) pitfall2 = (Math.floor(Math.random() * (19 - 1)) + 1);
+pitfall3 = (Math.floor(Math.random() * (19 - 1)) + 1);
+while (pitfall3 == pitfall2 || pitfall3 == pitfall1) pitfall3 = (Math.floor(Math.random() * (19 - 1)) + 1);
+impossible = new Array(pitfall1,pitfall2,pitfall3)
+if (impossible.indexOf(4) >= 0 && impossible.indexOf(1) >= 0) setPitfalls();
+if (impossible.indexOf(15) >= 0 && impossible.indexOf(18) >= 0) setPitfalls();
+}
+</script>
+
+<style>
+td { height: 80px; width: 50px; }
+</style>
+</head>
+<body onload="getReady()">
+<div id="container">
+<img src="images/superhero.jpg" class="floatleft" />
+<h1 id="logo"><em>Greg's Maze</em></h1>
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="#">Home</a>
+  <a href="#">About Greg</a>
+  <a href="#">Play a Game</a>
+  <a href="#">Sign In</a>
+  <a href="#">Contact Us</a></p>
+</div>
+<div id="content">
+<p>Click a square to move there.  If you find a pitfall, try another route.  Get to the castle to complete the maze.</p>
+<table width = "60%" align = "center">
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+
+</table>
+</div>
+<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+<a href="mailto:yourfirstname@yourlastname.com">
+yourfirstname@yourlastname.com</a></div>
+</div>
+
+</body></html>

@@ -1,0 +1,122 @@
+
+
+<html>
+<head>
+<title>Greg's Gambits | Hangman</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="mySource.js"></script>
+<style>
+.letter {
+float: left;
+margin-left: 5px;
+visibility: hidden;
+}
+</style>
+<script>
+//show/hide divs
+	var nooseCount = 0;
+	var wordNum = Math.floor((Math.random()*9)+1);
+	var picture = "pic" + wordNum + ".jpg";
+	var newWord = ""; var win = false; var goodGuess = false;
+	var lgth = 0; var guessLetter;
+	var word = ""
+	words = new Array("ghost","horse","insect","celery","pelican","jewelbox","castle","monster","bunny")
+function getWord() {
+	nooseCount = 0;
+	wordNum = Math.floor((Math.random()*9)+1);
+	picture = "pic" + wordNum + ".jpg";
+	word = words[wordNum - 1];
+	newWord = ""; win = false; goodGuess = false;
+	lgth = word.length; guessLetter;
+	for (var i = 0;i<lgth; i++) newWord = newWord + "_ ";
+	document.getElementById("hangme").src = "images/hangman0.gif";
+		for (var k=1;k<11;k++) {
+			if (k <= lgth) { document.getElementById("letter" + k).style.visibility = "visible"; }
+			else { document.getElementById("letter" + k).style.visibility = "hidden"; }
+			document.getElementById("letter" + k).innerHTML = "_";
+		}
+	startHangman();
+}
+function startHangman() {
+		goodGuess = false;
+		guessLetter = prompt("Guess a letter");
+
+		for (var j=0;j<lgth;j++) {
+			if (guessLetter == word.charAt(j)) {
+				goodGuess = true;
+				var offSet = 2*j;
+				newWord = setCharAt(newWord, offSet, guessLetter);
+				document.getElementById("letter" + (j + 1)).innerHTML = guessLetter
+			}
+		}
+
+		win = checkWord(word, newWord);
+		if (win == true) {
+			document.getElementById("result").innerHTML = ("You win!");
+			document.getElementById("hangme").src = picture;
+			document.getElementById("button").disabled = false;
+		}
+		else if (win == false) {
+			document.getElementById("result").innerHTML = ("not a winner yet");
+			if (goodGuess == false) nooseCount = nooseCount + 1;
+			document.getElementById("hangme").src = ("images/hangman" + nooseCount + ".gif");
+			if (nooseCount < 10) { setTimeout('startHangman()',100); document.getElementById("button").disabled = true;  }
+			else { 
+				document.getElementById("button").disabled = false; 
+				document.getElementById("result").innerHTML = ("Sorry, you loose");
+				for (var l=1;l<=lgth;l++) { document.getElementById("letter" + l).innerHTML = word.charAt(l - 1); }
+			}
+		}
+	}
+function checkWord(word, otherWord) 
+{
+	var cleanWord;
+	cleanWord = otherWord;
+	cleanWord = otherWord.replace(/ /g, "");
+	if (word == cleanWord) return true;
+	else return false;
+}
+function setCharAt(str,index,chr) 
+{
+if (index > str.length-1) return str;
+return str.substr(0,index) + chr + str.substr(index+1);
+}
+</script>
+</head>
+<body>
+	<div id="container">
+		<img src="images/superhero.jpg" class="floatleft" />
+		<h1 id="logo"><em>The Game of Hangman</em></h1>
+ 		<h2 align="center">Greg Challenges You to a Game of Hangman</h2>
+		<p>&nbsp;</p>
+		<div id="nav">
+  <p><a href="#">Home</a>
+  <a href="#">About Greg</a>
+  <a href="#">Play a Game</a>
+  <a href="#">Sign In</a>
+  <a href="#">Contact Us</a></p>
+		</div>
+	<div id="content" style="width: 600px; margin-left: auto; margin-right: auto;">
+<p><input type="button" value="Start the game" onclick="getWord();" id="button"/></p>
+<div id="noose" class="floatright">
+<img src="images/hangman10.gif" id="hangme"/>
+</div>
+<div id="result"><p>&nbsp;</p></div>
+<div id="letter1" class="letter">_</div>
+<div id="letter2" class="letter">_</div>
+<div id="letter3" class="letter">_</div>
+<div id="letter4" class="letter">_</div>
+<div id="letter5" class="letter">_</div>
+<div id="letter6" class="letter">_</div>
+<div id="letter7" class="letter">_</div>
+<div id="letter8" class="letter">_</div>
+<div id="letter9" class="letter">_</div>
+<div id="letter10" class="letter">_</div>
+</div>
+		
+	</div>
+	<div id="footer">Copyright &copy; 2013 Greg's Gambits<br />
+		<a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a></div>
+	</div>
+</body>
+</html>

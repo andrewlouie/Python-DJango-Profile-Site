@@ -1,0 +1,201 @@
+@charset "utf-8";
+* {     font-family: 'Karla', sans-serif; }
+p,li,label,td {
+font-size: 18px;	
+}
+.aaheader {
+	margin-top: 30px;
+}
+h3 {
+	color: #2d2e71;
+	font-size:24px;
+}
+h4 {
+color: #bcd06f;
+font-size: 24px;		
+}
+h5 {
+color: inherit;
+font-weight: normal;	
+font-size: 18px;
+}
+.abox {
+display: block;
+border: 5px solid #bcd06f;
+background-color: #2d2e71;
+font-size: 30px;
+color: white;
+text-align:center;
+margin-bottom: 10px;
+height: 50px;
+line-height: 40px;
+}
+.abox:hover {
+text-decoration:none;
+font-weight: bold;	
+color: white;
+}
+nav ul {
+margin: 5px;	
+text-align: center;
+}
+.aa1st li {
+	margin-top: 45px;
+	font-size: 16px;
+	display:inline-block;
+}
+#slider1_container {
+margin-left: 15px;
+margin-right: 15px;	
+}
+nav ul li {
+margin: 0px;
+display: inline-block;
+}
+nav ul li a {
+color: #4F4F4D;
+padding: 8px;
+border-radius: 8px;
+}
+a: hover {
+text-decoration: none;	
+}
+nav ul li a:hover, .active {
+color: white;
+background: #2d2e71; /* Old browsers */
+background: -moz-linear-gradient(top, #2d2e71 0%, #207cca 29%, #207cca 29%, #2989d8 64%, #2989d8 69%, #2d2e71 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2d2e71), color-stop(29%,#207cca), color-stop(29%,#207cca), color-stop(64%,#2989d8), color-stop(69%,#2989d8), color-stop(100%,#2d2e71)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #2d2e71 0%,#207cca 29%,#207cca 29%,#2989d8 64%,#2989d8 69%,#2d2e71 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #2d2e71 0%,#207cca 29%,#207cca 29%,#2989d8 64%,#2989d8 69%,#2d2e71 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #2d2e71 0%,#207cca 29%,#207cca 29%,#2989d8 64%,#2989d8 69%,#2d2e71 100%); /* IE10+ */
+background: linear-gradient(to bottom, #2d2e71 0%,#207cca 29%,#207cca 29%,#2989d8 64%,#2989d8 69%,#2d2e71 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2e71', endColorstr='#2d2e71',GradientType=0 ); /* IE6-9 */
+text-decoration: none;
+}
+.aacontainer {
+	background: transparent url(background2.jpg) center 25px no-repeat;
+	width: 100%;
+	height: 400px;
+	;
+	background-size: cover;
+}
+.aamain,.aamain2 {
+-webkit-box-shadow: 3px 3px 9px 0px rgba(102,102,102,1);
+-moz-box-shadow: 3px 3px 9px 0px rgba(102,102,102,1);
+box-shadow: 3px 3px 9px 0px rgba(102,102,102,1);
+border-radius: 5px;	
+margin-top: 5px;
+background-color: white;
+padding-top: 5px;
+}
+.aamain img {
+width: 100%;
+height: auto;
+margin-left: -8px;	
+border-radius: 5px;
+}
+.aamain2 img {
+width: 100%;
+height: auto;
+margin-left: -8px;	
+}
+h2 {
+color: #bcd06f;
+font-size: 40px;	
+font-weight: bold;
+text-transform:uppercase;
+text-align:center;
+}
+footer {
+text-align: center;
+margin-top: 15px;
+margin-bottom: 15px;	
+font-size: 10px;
+font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif 
+}
+hr { margin-left: 5px; margin-right: 5px; display: block; height: 1px;
+    border: 0; border-top: 1px solid #2d2e71;
+    margin: 1em 0; padding: 0;  }
+h1 {
+color: #bcd06f;
+font-size: 30px;	
+}
+.aalogo img {
+max-width: 100%;	
+height: auto;
+}
+@media screen and (min-width:768px) and (max-width: 1024px) {
+.container {
+	width: 95%;
+	padding-left: 1px;
+	padding-right: 1px;
+margin-left: 15px;
+margin-right: 15px;	
+}
+nav ul li {
+margin: 3px;
+}
+}
+@media screen and (max-width:850px) {
+.aa1st li {
+	margin-top: 25px;
+}
+}
+@media screen and (max-width:768px){
+	ul {
+		padding-left: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;	
+	display: inline-block;
+	margin-top: 20px;
+	}
+	nav {
+	text-align: center;	
+	}
+	.aalogo {
+	text-align: center;
+	}
+}
+.aboutpic {
+width: 300px !important;
+height: auto;
+float:left;
+margin-right: 30px;
+}
+@media screen and (max-width:480px){
+.aanavcont {
+padding-left: 0px;
+padding-right: 0px;	
+}
+nav ul li {
+margin: 3px;
+}
+.aboutpic {
+width: 100%;
+float: none;
+}
+}
+#name, #email, #telephone {
+width: 400px;
+max-width: 75%;	
+margin-top: 10px;
+}
+#aaform label {
+width: 150px;
+display: inline-block;
+text-align: right;
+margin-right: 5px;
+margin-top: 10px;	
+vertical-align: top;
+}
+#aaform textarea {
+margin-top: 10px;	
+width: 400px;
+height: 250px;
+}
+#ccpic {
+width: 100%;
+height: 100%;	
+margin-bottom: 15px;
+}

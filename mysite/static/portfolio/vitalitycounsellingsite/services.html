@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vitality Counselling With Barb Shannon</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+    <style>
+    table td {
+	width: 50%;	
+	}
+	table {
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 15px;	
+	}
+    </style>
+        <script src="js/jssor.slider.mini.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+var options = { $AutoPlay: true };                    
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales
+        //while window resizes
+        function ScaleSlider() {
+            var parentWidth = $('#slider1_container').parent().width();
+            if (parentWidth) {
+                jssor_slider1.$ScaleWidth(parentWidth);
+            }
+            else
+                window.setTimeout(ScaleSlider, 30);
+        }
+        //Scale slider after document ready
+        ScaleSlider();
+                                        
+        //Scale slider while window load/resize/orientationchange.
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        //responsive code end
+    });
+</script>
+  </head>
+  <body>
+  <div class="container container-fluid">
+  <div class="row aaheader">
+  <div class="col-lg-4 col-sm-5 aalogo">
+  <a href="index.html"><img src="logo.png" width="650" height="321" alt="Vitality Counselling With Barb Shannon Logo"/></a>
+  </div>
+  <div class="col-lg-8 col-sm-7 aanavcont">
+<nav>
+	<ul class="aa1st">
+		<li><a href="index.html">HOME</a></li>
+		<li><a href="about.html">ABOUT ME</a></li>
+		<li><a href="services.html" class="active">SERVICES</a></li>
+		<li><a href="fees.html">FEES/PAYMENT</a></li>
+   		<li><a href="confidentiality.html">ABOUT CONFIDENTIALITY</a></li>
+		<li><a href="contact.html">CONTACT</a></li></ul>
+</nav>
+  </div>
+  </div>
+  </div>
+  <div class="aacontainer">&nbsp;
+  <div class="container container-fluid">
+  <div class="row">
+  <div class="col-sm-1 hidden-xs"></div>
+  <div class="col-sm-10 aamain2">
+ 
+  <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+               <div><img u="image" src="kids.jpg" alt="Kids"/></div>
+               <div><img u="image" src="woman.jpg" alt="Woman"/></div>
+        <div><img u="image" src="youth.jpg" alt="Youth"/></div>
+
+                      <div><img u="image" src="family.jpg" alt="Family"/></div>
+    </div>
+</div>
+  <h2>Services</h2><p>
+At Vitality Counselling Services I provide client-centred counselling to children, youth, adults and families in the Kitchener-Waterloo Region. I offer services that encourages well-being and promotes the development of strategies for personal growth. I am committed to providing the best professional counselling experience possible in a relaxed and welcoming setting.
+</p><p>
+You do not need to have a diagnosis to see me. I work compassionately and effectively with individuals and families in the following areas:
+</p>
+<table>
+	<tr>
+		<td><li>Anxiety/Stress</li></td>
+		<td><li>Emotion Management</li></td>
+	</tr>
+	<tr>
+		<td><li>Depression</li></td>
+		<td><li>Parent-Teen Mediation</li></td>
+	</tr>
+	<tr>
+		<td><li>Parenting Strategies</li></td>
+		<td><li>Self-Harm</li></td>
+	</tr>
+	<tr>
+		<td><li>Anger</li></td>
+		<td><li>Greif/Loss</li></td>
+	</tr>
+	<tr>
+		<td><li>Trauma</li></td>
+		<td><li>Assertiveness/Self-Esteem</li></td>
+	</tr>
+	<tr>
+		<td><li>Stress</li></td>
+		<td><li>Boundaries</li></td>
+	</tr>
+	<tr>
+		<td><li>Relationships</li></td>
+		<td><li>Substance use/misuse</li></td>
+	</tr>
+</table>
+<p>If you feel you are struggling with any of the above concerns, please contact me to book an appointment.
+</p>
+<a href="contact.html" class="abox">Book an Appointment</a>
+</div><div class="col-sm-1 hidden-xs"></div>
+  </div>
+  <footer>
+  &copy; Copyright <script>document.write(new Date().getFullYear());</script> Vitality Counselling With Barb Shannon - Website by Andrew Aaron
+  </footer>
+  </div>
+  </div>
+  </body>
+</html>

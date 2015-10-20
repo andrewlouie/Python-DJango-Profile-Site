@@ -1,0 +1,373 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="title" content="CapitalJunk.ca - Ottawa Dumpster and Bin Rentals">
+	<meta name="description" content="Ottawa Dumpster and Bin Rentals - Book online and get your bin today!">
+    <meta name="keywords" content="bin, bins, dumpster, dumpsters, rental, rentals, ottawa, junk, truck, driveway, cheap, easy, tipping, glebe, kanata, orleans, westboro, canada, ontario, delivery, nepean, questions, recycling, disposal, book, environmental, environment">
+	<meta name="author" content="Andrew Aaron">
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>CapitalJunk.ca - Ottawa Dumpster and Bin Rentals</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.offcanvas.min.css"/>
+<link rel="stylesheet" href="jquery-ui.min.css"/>
+<script src="bootstrap.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="dist/js/bootstrap.offcanvas.js"></script>
+<script src="jquery-ui.min.js"></script>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<style>
+.list-group-item {
+	text-align: center;
+}
+.aah1 {
+  background-color: #898989;
+  color: white;
+  font: italic bold 100px Georgia, Serif;
+  text-shadow: 3px 0 black;	
+}
+</style>
+
+<script>
+$(document).ready(function(){
+	$( "#accordion" ).accordion();
+	$('#content2,#content3,#content4,#content5,#content6').css('display','none');
+	$('#c1link').click(function() {
+		$('#content2,#content3,#content4,#content5,#content6').hide('slow',function() { });
+		$('#content1').show('slow', function() { 	});	
+		$('#li1').addClass('active');
+		$('#li2,#li3,#li4,#li5,#li6').removeClass('active');
+		event.preventDefault(); 
+	});
+	$('#c2link').click(function() {
+		$('#content1,#content3,#content4,#content5,#content6').hide('slow',function() { });
+		$('#content2').show('slow', function() {	});	
+		$('#li2').addClass('active');
+		$('#li1,#li3,#li4,#li5,#li6').removeClass('active');
+		event.preventDefault(); 
+	});
+	$('#c3link').click(function() {
+		$('#content2,#content1,#content4,#content5,#content6').hide('slow',function() { });
+		$('#content3').show('slow', function() {	});
+		$('#li3').addClass('active');
+		$('#li1,#li2,#li4,#li5,#li6').removeClass('active');		
+		event.preventDefault(); 
+	});
+	$('#c4link').click(function() {
+		$('#content2,#content3,#content1,#content5,#content6').hide('slow',function() { });
+		$('#li4').addClass('active');
+		$('#li1,#li2,#li3,#li5,#li6').removeClass('active');
+		$('#content4').show('slow', function() {	});	
+		event.preventDefault(); 
+	});		
+	$('#c5link').click(function() {
+		$('#content2,#content3,#content1,#content4').hide('slow',function() { });
+		$('#li5').addClass('active');
+		$('#li1,#li2,#li3,#li4,#li6').removeClass('active');
+		$('#content5').show('slow', function() {	});	
+		event.preventDefault(); 
+	});
+	$('#c6link').click(function() {
+		$('#content2,#content3,#content1,#content4,#content5').hide('slow',function() { });
+		$('#li6').addClass('active');
+		$('#li1,#li2,#li3,#li4,#li5').removeClass('active');
+		$('#content6').toggle('slow', function() {	});	
+		event.preventDefault(); 
+	});			
+});
+</script>
+</head>
+<body><div class="container-fluid"><header class="clearfix">
+<div class="row topbar">
+<div class="col-sm-12"><a href="http://www.capitalbins.ca">
+<img src="Capital-Junk-Bin-Rental-Division.png" width="299" height="57" alt="CapitalJunk.ca Logo"/></a><span class="aatext">CALL US NOW: <a href="tel:+1613-825-0707">(613) 825-0707</a></span>
+        <button type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="pull-right aapromo">
+USE THE PROMO CODE:<br><strong>SWEETDEAL</strong><br>AND SAVE $20 OFF YOUR BIN RENTAL
+</div>
+</div>
+</div>
+        <nav class="navbar navbar-default navbar-offcanvas navbar-offcanvas-right navbar-offcanvas-touch navbar-offcanvas-fade" role="navigation" id="js-bootstrap-offcanvas-2">
+            <div class="container-fluid" style="background-color:#20501a">
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="active"><a href="howitworks.html">HOW IT WORKS</a></li>
+                        <li><a href="serviceareas.html">SERVICES AREAS</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="booknow.html">BOOK NOW</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+</header><div class="row">
+  <div class="col-xs-1"></div>
+<div class="col-lg-3 col-sm-4">
+<ul class="nav nav-stacked secondnav">
+<li class="active" id="li1"><a href="#content1" id="c1link">BINS</a></li>
+<hr>
+<li id="li2"><a href="#content2" id="c2link">FAQ</a></li>
+<hr>
+<li id="li3"><a href="#content3" id="c3link">PRICING</a></li>
+<hr>
+<li id="li4"><a href="#content4" id="c4link">PAYMENT</a></li>
+<hr>
+<li id="li5"><a href="#content5" id="c5link">ENVIRONMENTAL POLICY</a></li>
+<hr>
+<li id="li6"><a href="#content6" id="c6link">RENTAL RULES</a></li>
+<hr>
+</ul></div>
+<div class="col-lg-7 col-sm-6 aacontent">
+<div id="content1" class="slidein aamain">
+<h3>DUMPSTER RENTAL OTTAWA – CAPITAL BINS</h3>
+
+<p>Renting a dumpster in Ottawa has never been easier with our hassle-free process!</p>
+<p>Offering 16 and 20 yard dumpsters for a wide range of residential projects.</p>
+<ol>
+<li>Book your dumpster via telephone or with our simple <a href="booknow.html">online form</a>!</li>
+<li>Fill your dumpster!</li>
+<li>We’ll come pick it up on the agreed date!</li></ol>
+
+<strong>5 Day Rental for $229.00 + Disposal</strong>
+
+<ul>
+<li>Any Size Dumpster</li>
+<li>5 Business Day Rental</li>
+<li>Drop Off & Pick Up Included</li>
+</ul>
+
+<p><strong>The disposal fee is additional as it is the weight of the items in your dumpster. The weight is a pro-rated calculation of $107 / per metric ton. There are no additional fees.</strong></p>
+
+<h4>The Capital Bins Advantage</h4>
+<ul>
+<li>Driveway Safe and Friendly Bins</li>
+<li>Barn Doors make for Easy Access to Dumpster</li>
+<li>You Don’t Have to be On-Site</li>
+<li>Fast and Reliable Service</li></ul>
+<img src="16-yard-bin1-300x183.png" width="300" height="183" alt="16 Yard Bin"/>
+<img src="20yard-bin1-300x197.png" width="300" height="197" alt="20 Yard Bin"/>
+</div>
+<div id="content2" class="slidein aamain">
+<h2>F.A.Q.</h2>
+<div id="accordion">
+<h3>Q: How quickly can I get a dumpster rental?</h3>
+<div><p>
+A: Typically you will see a dumpster delivered within 1 – 2 business days… However, we understand last-minute emergencies that can only be address with an Ottawa dumpster rental. For example, a flooded basement must have its contents emptied immediately so it can be repaired asap, unforeseen renovation debris, or you sold your home and the buyer is not interested in keeping your furniture. We will always do our absolute best to accommodate your needs.</p></div>
+<h3>Q: Does all my junk need to be thrown over the sides of the dumpster?</h3>
+<div><p>
+A: Our dumpsters have big barn doors at the rear so appliances and heavy furniture can be easily loaded into the bin.</p></div>
+<h3>Q: I have a shared driveway, will the bin fit?</h3>
+<div><p>
+A: Our dumpster bins are designed for residential use. Our 20 yard bins will have no problem fitting into a single driveway.</p></div>
+<h3>Q: I live in a condo building; can I put a bin on the street?</h3>
+<div><p>
+A: The City of Ottawa’s by-law permit takes at least a week to approve and costs about $350.00. Once you acquire the permit we will have no problem parking on the street. If this is not a viable option for you, certainly have our full-service junk removal team swing by to clean up same day.</p></div>
+<h3>Q: My neighbour takes pride in his properties appearance, are your bins kept clean?</h3>
+<div><p>
+A: We promise our dumpsters won’t upset your neighbour! We keep them clean so they are not an eyesore.</p></div>
+<h3>Q: Do I get a delivery time for my bin?</h3>
+<div><p>
+A: We can provide a time-frame but it is very difficult to give an exact estimated time of arrival due to traffic, travel and line-ups at recycling and dumping facilities. Expect a drop-off between 8:00 am – 2:00 pm. Our hassle-free service means you don’t have to be home at the time of drop-off!</p></div>
+<h3>Q: Why is the weight an additional charge?</h3>
+<div><p>
+A: We like to keep it simple! Capital Bins wants to stand out among the crowd, so we only charge our clients for the weight that is used. Your receipt lists the weight of your items and how it was calculated. There are no additional fees or surcharges, just the flat rental rate plus disposal.</p></div>
+<h3>Q: What am I not allowed to put in the bin?</h3>
+<div><p>
+A: Please visit bin Rental Rules for more information on what cannot be placed on the bin.</p></div>
+<h3>Q: Where does my junk go?</h3>
+<div><p>
+A: Most of your junk is going to be recycled, re-purposed or donated. Everything else is taken to the landfill. We make every effort to sort through your materials in order to remove all the items that can be saved from the landfill.</p></div>
+<h3>Q: Are your trucks licensed and properly insured? Is your staff covered under ‘Worker’s Compensation’?</h3>
+<div><p>
+A:  Capital Junk is fully licensed by the M.O.E (Ministry of the Environment) to legally haul Residential and Commercial waste. We are also registered with the C.V.O.R (Commercial Vehicle Operator’s Registration) which allows us to operate commercial trucks. We hire experienced staff members and they are fully covered under The Worker’s Compensation Act in case of accidental injury.
+</p></div>
+<h3>Q: Will your bin damage my driveway?</h3>
+<div><p>
+A: With our modern and advanced hook-lift system of delivering dumpsters, the bins are placed down very gently and will not damage your driveway or interlock. Our crews care about your property and take every precaution to make sure your driveway does not sustain any damages.</p></div>
+<h3>Q: How do I know what the weight will be for the items in my bin?</h3>
+<div><p>
+A: Unless you know what the weight is of the items you are throwing in the bin, you won’t know what the weight is until we have picked up your dumpster and have it weight on a federally inspected scale by third party transfer station workers.</p></div>
+<h3>Q: Do I need to be at the location when you drop off and pick up my bin rental?</h3>
+<div><p>
+A: No, you do not have to be onsite when the bin is dropped off or picked up. Every detail is arranged over the phone.</p></div>
+<h3>Q: How do I pay for the rental?</h3>
+<div><p>
+A: We accept VISA, MasterCard and American Express. Cash, debit or money order is not an accepted method of payment.</p></div>
+<h3>Q: How do I arrange a drop-off?</h3>
+<div><p>
+A: Simply call our office at (613) 825-0707 and speak to a friendly customer service representative or conveniently book online </p></div></div></div>
+<div id="content3" class="slidein aamain">
+<h2>Pricing</h2>
+
+<p>Are you looking to rent a bin in Ottawa? Capital Bins is Ottawa’s bin rental solution! We offer dumpster rental services to both residential and commercial clients across the Ottawa region including Westboro, Kanata, Glebe and Orleans. With our advanced roll-off bin rentals, there is never a worry of damaging your driveway or interlock brick… and with our fast and simple booking method, you won’t have to be on-site to supervise the delivery or pickup!</p>
+
+<p>Please check out our cheap container rental prices below…</p>
+<div class="row"><div class="col-sm-6">
+<ul class="list-group">
+<br><br><br><br>
+<li class="list-group-item" style="background:#20501a;color:white;font-size:16px;"><strong>5 Days</strong></li>
+<li class="list-group-item"><h2>$229 + Tipping</h2></li>
+<li class="list-group-item">Rent a 20 yard dumpster</li>
+<li class="list-group-item">Guaranteed driveway friendly</li>
+<li class="list-group-item">5 days with the bin</li>
+<li class="list-group-item">Includes drop off and pick-up</li>
+<li class="list-group-item">Tipping is a pro-rated charge to your specific weight</li>
+<li class="list-group-item list-group-item-success" style="font-size:22px;"><a href="booknow.html">Place Order</a></li></ul>
+ </div><div class="col-sm-6">
+ <ul class="list-group">
+<li class="list-group-item aah1"><h1>Most Popular</h1></li>
+<li class="list-group-item" style="background:#20501a;color:white;font-size:16px;"><strong>3 Days</strong></li>
+<li class="list-group-item"><h2>$199 + Tipping</h2></li>
+<li class="list-group-item">Rent a 20 yard dumpster</li>
+<li class="list-group-item">Guaranteed driveway friendly</li>
+<li class="list-group-item">3 days with the bin</li>
+<li class="list-group-item">Includes drop off and pick-up</li>
+<li class="list-group-item">Tipping is a pro-rated charge to your specific weight</li>
+<li class="list-group-item list-group-item-success" style="font-size:22px;"><a href="booknow.html">Place Order</a></li>
+</div></div>
+<h3>Flexible Bin Rental Plans!</h3>
+<p>At Capital Bins we understand that every project has its specific requirements and challenges, that’s why we offer flexible bin rental add-on’s to suit your needs!</p>
+
+<h4>Flexible Add-ons to your Bin Rental!</h4>
+<ul>
+<li>$20 per additional day</li>
+<li>$100 per additional week</li>
+<li>$175 + Tipping each time we pickup your bin, empty it and return it</li></ul>
+<h4>What is Tipping?</h4>
+
+<p>Tipping is the charge we apply to your rental once we have removed your bin and taken it to a transfer station to determine the weight of the contents in your bin. This charge is pro-rated to your specific weight and the transfer stations charge $107 per metric ton (1000kg or 2204lbs). You will receive a receipt with the total cost breakdown via e-mail once your rental is complete.</p>
+</div>
+<div id="content4" class="slidein aamain">
+<h3>How Does Payment Work?</h3>
+
+<p>We accept Visa, Mastercard and American Express as a method of payment. Capital Bins requires a credit card on file before we can supply you with a bin rental. If you need to pay by another method, we will hold money on your credit card but ask you to come into the office to pay with a Debit card or cash once your rental is complete.</p>
+
+<p>We cannot accept a down payment in cash or as a debit card transaction because we will not know what your total cost is until we have weighed the truck and its dumpster at the transfer station. We apologize for any inconvenience! Please call our office at (613) 825-0707 if you require further details on this matter, as we would be happy to assist you!</p></div>
+<div id="content5" class="slidein aamain">
+<h2>Environmental Policy</h2>
+
+<p>Capital Bins is an innovative pioneer specializing in responsible waste management solutions for commercial and residential clients in Ottawa and the surrounding areas. Our conscientious approach to waste disposal maximizes the life-cycle of your furniture, appliances and other materials through the donation of salvageable items and proper recycling.
+</p><p>
+We are a community-based, eco-friendly business standing by our promise to provide quality and affordable bin rental service as well as upholding our commitment to protecting the environment and the City we live in. Capital Junk and its Ottawa bin rental division Capital Bins, actively participate in local initiatives to promote the health and wellbeing of the environment through Ottawa’s Cleaning the Capital, Ottawa River Keeper and Adopt-A-Road program, partnership with the City of Ottawa’s <a href="http://www.ottawacitizen.com/news/local-news/take-it-back-directory">TAKE IT BACK!</a> program, the <a href="http://www.ontarioelectronicstewardship.ca/">Ontario Electronic Stewardship program</a> and <a href="http://www.capitaljunk.ca/who-we-are/charity-local-work/">many more as they arise</a>!
+</p><p>
+We donate anything that can be dropped off at local non-profit organizations such as <a href="http://www.habitat.ca/">Habitat for Humanity</a>, <a href="http://www.goodwill.on.ca/">Goodwill</a>, <a href="http://www.thehubalmonte.com/">The Hub</a>, <a href="http://www.thriftstore.ca/ottawa/">Salvation Army</a> and others. When you choose Capital Bins as your go-to choice for Ottawa bin rentals, you make it possible for us to donate your second-hand furniture, working appliances and sometimes your building materials are in such good condition that they are able to be donated and used again! As always, the staff at Capital Bins are fully committed to recycling those old appliances, obsolete technology and devices, as well as other recyclable goods so that they stay out of the landfill and do not burden the environment!
+</p><p>
+We take strides in eco-friendly business practises. Capital Bins operates in a responsible manner through ensuring fuel efficiency and the proper disposal of your materials. We are fully insured and properly licensed through the Ministry of the Environment, as well as the Commercial Vehicles Operators Registration. Capital Bins’ policies fall in line with the environmental legislation and regulations. We are professionals who refuse to cut corners on our efforts to reduce waste and prevent pollution.
+</p>
+<h4>The Capital Bins Advantage!</h4>
+
+<ul>
+<li>Locally owned and operated</li>
+<li>Staff and trucks are fully licensed and insured</li>
+<li>Providing eco-friendly disposal of your unwanted debris</li>
+<li>Professional, efficient and transparent service</li>
+<li>Guaranteed pricing: never any hidden fees or surcharges</li>
+<li>Offering competitive rates on your Ottawa dumpster rental</li>
+<li>Serving residential and commercial clients</li>
+<li>But don’t take our word for it! Please visit our <a href="http://homestars.com/companies/2779347-capital-junk-formerly-capital-bins">Homestars Reviews</a> page to read all the fantastic comments from our pleased junk removal and bin rental customers!</li>
+</ul>
+</div>
+<div id="content6" class="slidein aamain">
+<h2>Rental Rules</h2>
+
+<p>Our bins are best used for residential waste and small construction projects. We have a weight restriction on our truck and it cannot withstand a dumpster that contains heavy and dense materials:</p>
+<ul>
+<li>Concrete, brick or stone</li>
+<li>Soil, sod and other clean fill</li>
+<li>Asphalt and asphalt shingles</li>
+<li>Lots of paper, books, magazines</li>
+<li>Lots of ceramic tile</li>
+</ul>
+<h4>We cannot accept any hazardous items in our bins such as:</h4>
+<ul>
+<li>Paint cans and other household chemicals</li>
+<li>Liquids of any kind – no exceptions!</li>
+<li>Bedbug contaminate</li>
+<li>Asbestos</li>
+<li>Extreme mold</li></ul>
+<p>Everything else can be placed in your bin rental! We accept old tires, beds, furniture, appliances and other construction materials such as wood, drywall, laminate flooring and ceiling tiles.</p>
+
+<p>We kindly ask our clients not to overfill the bin.</p>
+
+<p>We request a favour to please place any appliances, old tires and paper at the back of the bin last. If you place these items in last, or on top of your waste, we can recycle these materials with ease. It helps us save time so we can quickly empty and clean the bin and deliver it to the next client!
+</p>
+</div>
+</div>
+<div class="col-xs-1"></div>
+</div>
+<div class="row"><!-- #BeginLibraryItem "/Library/Footer.lbi" --><footer>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="row" style="margin-left: 35px">
+				<div class="col-sm-12">
+					<h2>GET IN TOUCH!</h2>
+					<h3>Capital Junk</h3>
+					15 Grenfell Crescent, Unit 6<br>
+					Ottawa, Ontario<br>
+					K2G 0G3
+					<br><br>
+					<a href="http://goo.gl/maps/Vk9b9">Get Directions</a>
+					<br><br>
+					Telephone: <a href="tel:+1-613-825-0707">(613) 825-0707</a>
+					<br><br>
+					Email: <a href="mailto:info@capitalbins.ca">info@capitalbins.ca</a>
+				</div>
+			</div>
+			<div class="row">
+            	<div class="col-xs-2"></div>
+				<div class="col-xs-2">
+                	<h4></h4>
+    	            <a href="index.html">Home</a><br>           
+                </div>
+				<div class="col-xs-2">
+	                <a href="serviceareas.html"><h4>Service Areas</h4></a>    
+	                <a href="serviceareas.html">Glebe</a>    <br>
+	                <a href="serviceareas.html">Kanata</a>    <br>                
+	                <a href="serviceareas.html">Orleans</a>    <br>                  
+	                <a href="serviceareas.html">Westboro</a>    <br>              
+                </div>
+				<div class="col-xs-2">
+	                <a href="howitworks.html"><h4>How It Works</h4></a> 
+	                <a href="howitworks.html">Bins</a> <br>
+	                <a href="howitworks.html">FAQ</a> <br>
+	                <a href="howitworks.html">Pricing</a> <br>                
+	                <a href="howitworks.html">Payment</a> <br>                
+	                <a href="howitworks.html">Environmental Policy</a> <br>                
+	                <a href="howitworks.html">Rental Rules</a> <br>                                   
+                </div>
+				<div class="col-xs-2">
+                	<h4></h4>
+	                <a href="videos.html">Videos</a><br>
+	                <a href="contact.html">Contact Us</a><br>
+	                <a href="booknow.html">BOOK NOW!</a><br>                
+                </div>
+            	<div class="col-xs-2"></div>                                                         
+			</div>
+            
+        </div>
+		<div class="col-sm-6">
+        	<img src="map.jpg" width="694" height="400" alt="Map to our location"/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12" style="text-align:center;">
+<br>			Copyright © 2015 Capitalbins.ca. All Rights Reserved.
+		</div>
+    </div>
+</footer>
+<!-- #EndLibraryItem --></div></div>
+<script type="text/javascript">
+$(function() {
+	$( "#Accordion1" ).accordion(); 
+});
+</script>
+</body>
+</html>
